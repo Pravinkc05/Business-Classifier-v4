@@ -44,7 +44,7 @@ if clear:
 # ---- Load Reference Data ----
 @st.cache_data
 def load_reference_data():
-    return pd.read_excel(r"C:/Users/Sahil/OneDrive - RG Insurance Processing Services Private Limited/RiskMD Special Project/DOO Automation/IRMI Cross-Reference Guide.xlsx")
+    return pd.read_excel(r"C:\Python project\IRMI Cross-Reference Guide.xlsx")
 
 ref_data = load_reference_data()
 
@@ -127,7 +127,7 @@ def cosine_similarity(a, b):
 
 def find_best_match(input_description, state_input, client):
     try:
-        df = pd.read_pickle(r"C:/Users/Sahil/OneDrive - RG Insurance Processing Services Private Limited/RiskMD Special Project/DOO Automation/descriptions_with_embeddings.pkl")
+        df = pd.read_pickle(r"C:\Python project\descriptions_with_embeddings.pkl")
         df.columns = df.columns.str.strip()
 
         response = client.embeddings.create(

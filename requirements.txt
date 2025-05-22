@@ -3,6 +3,3 @@ pandas
 numpy
 requests
 openai
-time
-webdriver_manager
-selenium
